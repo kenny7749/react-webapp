@@ -10,10 +10,12 @@ RUN npm run build
 
 #prepare nginx
 FROM nginx:1.16.0-alpine
-COPY --from=build /app/build /usr/share/nginx/html
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx/nginx.conf /etc/nginx/conf.d
-
+#COPY --from=build /app/build /usr/share/nginx/html
+#RUN rm /etc/nginx/conf.d/default.conf
+#COPY nginx/nginx.conf /etc/nginx/conf.d
+COPY nginx/nginx-os4.conf /etc/nginx/nginx.conf
+WORKDIR /code
+COPY --from=BUILD /app/build /usr/share/nginx/html
 #run nginx
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
