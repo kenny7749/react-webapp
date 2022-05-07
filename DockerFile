@@ -1,4 +1,4 @@
-FROM node:12.2.0-alpine as build
+FROM node:14-alpine as build
 
 WORKDIR /app
 
@@ -16,4 +16,4 @@ COPY nginx/nginx.conf /etc/nginx/conf.d
 
 #run nginx
 EXPOSE 5000
-CMD ["nginx", "-g", "deamon off;"]
+CMD ["nginx", "-g", "daemon off;"]
