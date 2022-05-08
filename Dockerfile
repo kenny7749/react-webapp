@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . /app/
 
 RUN npm install --silent
-RUN npm isntall react-scripts@3.0.1 -g --silent
+#RUN npm isntall react-scripts@3.0.1 -g --silent
 RUN npm run build
 
 #prepare nginx
