@@ -20,7 +20,7 @@ function App() {
       api: {api}<br />
       <br />
 
-      <input value={api} setValue={(e) => setApi(e.target.value)}></input>
+      <input value={api} onChange={(e) => setApi(e.target.value)} />
       <button onClick={() => fetchHospitals()}>Get hospital from spring boot</button><br />
       hospitals: {JSON.stringify(hospitals)}
 
