@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-const host = process.env.SPRINGBOOT_PORT_8080_TCP_ADDR || 'localhost'
-const port = process.env.SPRINGBOOT_PORT_8080_TCP_PORT || 8080
+const host = process.env.REACT_APP_BACKEND_HOST || 'localhost'
+const port = process.env.REACT_APP_BACKEND_PORT || 8080
+
 const api = `http://${host}:${port}/hospitals`
 
 
