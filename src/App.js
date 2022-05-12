@@ -1,18 +1,17 @@
 import './App.css';
 import { useState } from 'react';
 
-const host = process.env.REACT_APP_BACKEND_HOST || 'springboot'
-const port = process.env.REACT_APP_BACKEND_PORT || 8080
+const host = 'springboot'
+const port = 8080
 
-const api = `http://${host}:${port}/hospitals`
-
+const api = `https://${host}:${port}/hospitals`
 
 function App() {
   const [hospitals, setHospitals] = useState([])
 
   const fetchHospitals = () => {
 
-    fetch(api).then(res => res.json()).then( res => setHospitals(res))
+    fetch(api).then(res => res.json()).then(res => setHospitals(res))
   }
 
   return (
