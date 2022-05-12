@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 
-const host = process.env.REACT_APP_BACKEND_HOST || 'localhost'
+const host = process.env.REACT_APP_BACKEND_HOST || 'springboot'
 const port = process.env.REACT_APP_BACKEND_PORT || 8080
 
 const api = `http://${host}:${port}/hospitals`
