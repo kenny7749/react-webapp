@@ -4,13 +4,12 @@ import { useState } from 'react';
 const host = 'springboot'
 const port = 8080
 
-const api = `https://${host}:${port}/hospitals`
+const api = `${host}:${port}/hospitals`
 
 function App() {
   const [hospitals, setHospitals] = useState([])
 
   const fetchHospitals = () => {
-
     fetch(api).then(res => res.json()).then(res => setHospitals(res))
   }
 
