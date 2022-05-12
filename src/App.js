@@ -4,9 +4,10 @@ import { useState } from 'react';
 const host = 'springboot'
 const port = 8080
 
-const api = `${host}:${port}/hospitals`
+const url = `https://${host}:${port}/hospitals`
 
 function App() {
+  const [api, setApi] = useState(url)
   const [hospitals, setHospitals] = useState([])
 
   const fetchHospitals = () => {
@@ -16,11 +17,10 @@ function App() {
   return (
     <div>
       <h1>React Application</h1>
-      SPRINGBOOT_PORT_8080_TCP_ADDR: {host}<br />
-      SPRINGBOOT_PORT_8080_TCP_PORT: {port}<br />
       api: {api}<br />
       <br />
 
+      <input value={api} setValue={(e) => setApi(e.target.value)}></input>
       <button onClick={() => fetchHospitals()}>Get hospital from spring boot</button><br />
       hospitals: {JSON.stringify(hospitals)}
 
