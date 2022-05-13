@@ -8,10 +8,13 @@ const url = `https://springboot_api/hospitals`
 
 function App() {
   const [api, setApi] = useState(url)
-  const [hospitals, setHospitals] = useState([])
+  const [results, setResults] = useState('')
 
   const fetchHospitals = () => {
-    fetch(api).then(res => res.json()).then(res => setHospitals(res))
+    fetch(api).then(res => {
+      console.log(res)
+      return res.json()
+    }).then(res => setResults(res))
   }
 
   return (
@@ -22,7 +25,7 @@ function App() {
 
       <input value={api} onChange={(e) => setApi(e.target.value)} />
       <button onClick={() => fetchHospitals()}>Get hospital from spring boot</button><br />
-      hospitals: {JSON.stringify(hospitals)}
+      reuslts: {JSON.stringify(results)}
 
     </div>
   );
