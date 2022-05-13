@@ -1,10 +1,10 @@
 import './App.css';
 import { useState } from 'react';
 
-const host = 'springboot'
+const host = '172.30.30.68'
 const port = 8080
 
-const url = `https://springboot_api/hospitals`
+const url = `https://${host}:${port}/hospitals`
 
 function App() {
   const [api, setApi] = useState(url)
