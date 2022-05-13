@@ -4,7 +4,7 @@ import { useState } from 'react';
 const host = '172.30.30.68'
 const port = 8080
 
-const url = `https://${host}:${port}/hospitals`
+const url = `/api/hospitals`
 
 function App() {
   const [api, setApi] = useState(url)
