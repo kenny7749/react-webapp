@@ -1,9 +1,6 @@
 import './App.css';
 import { useState } from 'react';
 
-const host = '172.30.30.68'
-const port = 8080
-
 const url = `/api/hospitals`
 
 function App() {
