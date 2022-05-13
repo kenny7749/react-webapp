@@ -4,7 +4,7 @@ import { useState } from 'react';
 const host = 'springboot'
 const port = 8080
 
-const url = `https://${host}:${port}/hospitals`
+const url = `https://springboot_api/hospitals`
 
 function App() {
   const [api, setApi] = useState(url)
