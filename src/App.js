@@ -18,10 +18,11 @@ function App() {
     <div>
       <h1>React Application</h1>
       api: {api}<br />
+      REACT_APP_TESTING_ENV_VAR: {process.env.REACT_APP_TESTING_ENV_VAR || 'Not defined'}
       <br />
 
       <input value={api} onChange={(e) => setApi(e.target.value)} />
-      <button onClick={() => fetchHospitals()}>Get hospital from spring boot</button><br />
+      <button onClick={() => fetchHospitals()}>Get results from spring boot</button><br />
       reuslts: {JSON.stringify(results)}
 
     </div>
