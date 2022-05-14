@@ -3,9 +3,6 @@ FROM node:14-alpine as build
 WORKDIR /app
 
 COPY . /app/
-ARG REACT_APP_BACKEND_HOST=$SPRINGBOOT_PORT_8080_TCP_ADDR
-ARG REACT_APP_BACKEND_PORT=$SPRINGBOOT_PORT_8080_TCP_PORT
-RUN echo $SPRINGBOOT_PORT_8080_TCP_ADDR
 
 RUN npm install --silent
 #RUN npm isntall react-scripts@3.0.1 -g --silent
