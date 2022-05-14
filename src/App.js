@@ -19,8 +19,8 @@ function App() {
       <h1>React Application</h1>
       api: {api}<br />
       REACT_APP_TESTING_ENV_VAR: {process.env.REACT_APP_TESTING_ENV_VAR || 'Not defined'}
-      alsdifjasoidjfaaa
-      alsdifjasoidjfaaa
+      alsdifjasoidjfaaa<br />
+      alsdifjasoidjfaaa<br />
       alsdifjasoidjfaaa
       <br />
 
